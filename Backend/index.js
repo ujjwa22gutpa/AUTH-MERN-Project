@@ -1,11 +1,29 @@
-const express = require('express');
-const app = express();
-  require('dotend').config();
+require("dotenv").config();
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+require("./Models/UserModel.js");
+ require("./Models/dbModel.js");
+const AuthRouter = require("./Routes/AuthRouter.js")
 
-  const PORT = process.env.PORT || 5000;
- app.get('/', (req, res) => {
-  res.send('Hello World!');
-}); 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+
+
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+app.use(bodyParser.json());
+
+app.use(cors())
+
+app.post('/login',AuthRouter); 
+app.post('/signup',AuthRouter);
+
+app.get("/", (req, res) => {
+  res.send("hello!!!");
+});  
+
+
+app.listen(PORT, (req, res) => {
+  console.log(`server is runnig on ${PORT}`);
 });
