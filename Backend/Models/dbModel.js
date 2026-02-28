@@ -7,7 +7,7 @@ const connectDB = process.env.MONGO_URI;
     console.log('MongoDB Connected Successfully');
  })
  .catch((err)=>{
-    console.log('MongoDB Connection error: '+err);
+    console.log('MongoDB Connection error: '+ " "+ err);
  })
 
            

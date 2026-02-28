@@ -5,6 +5,8 @@ const cors = require("cors");
 require("./Models/UserModel.js");
  require("./Models/dbModel.js");
 const AuthRouter = require("./Routes/AuthRouter.js")
+const ProductRouter = require("./Routes/ProductRouter.js")
+
 
 
 
@@ -14,10 +16,11 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-app.use(cors())
+// app.use(cors());
 
 app.post('/login',AuthRouter); 
 app.post('/signup',AuthRouter);
+app.get('/products',ProductRouter)
 
 app.get("/", (req, res) => {
   res.send("hello!!!");
