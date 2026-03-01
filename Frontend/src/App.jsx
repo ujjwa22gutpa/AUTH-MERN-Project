@@ -1,11 +1,19 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 function App() {
-
   return (
     <>
-     <h2>hello React</h2>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
