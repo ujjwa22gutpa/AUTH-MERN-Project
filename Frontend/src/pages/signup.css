@@ -1,0 +1,99 @@
+/* Background */
+.container1 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(228, 221, 221);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Card */
+.container2 {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+h2 {
+  color: rgb(113, 94, 94);
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #667eea;
+  box-shadow: 0px 0px 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(239, 179, 179);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  background: rgb(225, 95, 95);
+}
+
+/* Login link */
+span {
+  display: block;
+  margin-top: 15px;
+  font-size: 13px;
+  text-align: center;
+}
+
+span a {
+  color: #667eea;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+span a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 
-// app.use(cors());
+ app.use(cors());
 
 app.post('/login',AuthRouter); 
 app.post('/signup',AuthRouter);
