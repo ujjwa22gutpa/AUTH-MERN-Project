@@ -12,7 +12,7 @@ const ensureValidation = (req, res, next) => {
   try {
     const token = auth.startsWith("Bearer") ? auth.slice(7) : auth;
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log(decoded)
+    // console.log(decoded)
     req.user = decoded;
     next();
   } catch (error) {

@@ -43,7 +43,7 @@ export default function Login() {
       const { success, message, error } = data;
       if (response.ok) {
         handleSuccess(message, "Login Successful");
-        localStorage.setItem("accessToken", data.accessToken);
+        localStorage.setItem("jwtToken", data.jwtToken);
         localStorage.setItem("Name", data.name);
         localStorage.setItem("email", data.email);
         setUser({
