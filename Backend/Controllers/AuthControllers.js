@@ -21,7 +21,9 @@ const  signup = async (req,res)=>{
         res.status(200).
         json({
             message:"sign up successfull",
-            success:true
+            success:true,
+            email:userModel.email,
+            name:userModel.name
         })
       } catch (error) {
             return res.status(500).

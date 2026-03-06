@@ -9,26 +9,22 @@ export default function Home(){
     const Navigate = useNavigate();
 
     useEffect(()=>{
-       const storedUser = localStorage.getItem("userData");
+       setLoggedInUser(localStorage.getItem("Name"))
 
-       if(storedUser){
-          const parsedUser = JSON.parse(storedUser);
-          setLoggedInUser(parsedUser.name);
-       }
     },[]);
 
     function handleButton(){
-        localStorage.removeItem("accessToken");
-        localStorage.removeItem("userData");
+        localStorage.clear();
         handleSuccess("User Logged out")
+       setLoggedInUser('');
         setTimeout(()=>{
                Navigate('/login');
         },1000)
-        setLoggedInUser('');
+       
     }
     return (
         <>
-          <h2>Welcome {loggedInUser || "User"}</h2>
+          <h2>Welcome { loggedInUser || "User"}</h2>
           <button onClick={handleButton}>Log Out</button>
           <ToastContainer />
         </>

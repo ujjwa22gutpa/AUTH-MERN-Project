@@ -50,12 +50,15 @@ export default function SignUp(){
             
             if(response.ok){
                 handleSuccess(message || "Account Created Successfully")
+                localStorage.setItem("accessToken", data.accessToken);
+                 localStorage.setItem("Name", data.name);
+                 localStorage.setItem("email", data.email);
                 setUser({
                     name:'',
                     email:'',
                     password:''
                 })
-                navigate("/login");
+                navigate("/home");
             } else if (error) {
                 const details = error?.details[0].message;
                 handleError(details ||  error || "Signup failed")

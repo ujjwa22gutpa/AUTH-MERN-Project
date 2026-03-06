@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import "react-toastify/dist/ReactToastify.css";
-import './app.css'
+import './App.css'
 
 function App() {
   return (
