@@ -22,9 +22,6 @@ app.post('/login',AuthRouter);
 app.post('/signup',AuthRouter);
 app.get('/products',ProductRouter)
 
-app.get("/", (req, res) => {
-  res.send("hello!!!");
-});  
 
 
 app.listen(PORT, (req, res) => {

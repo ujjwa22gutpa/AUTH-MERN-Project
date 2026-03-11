@@ -17,7 +17,7 @@ export default function Home() {
         Authorization: localStorage.getItem("jwtToken") ? `Bearer ${localStorage.getItem("jwtToken")}` : "",
       };
       const response = await fetch("http://localhost:5000/products", {
-      
+        method: "GET",
         headers: header,
       });
       const data = await response.json();

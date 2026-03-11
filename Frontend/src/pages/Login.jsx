@@ -39,7 +39,7 @@ export default function Login() {
         }),
       });
       const data = await response.json();
-      console.log("Raw Response:", response);
+      console.log("Raw Response:", data);
       const { success, message, error } = data;
       if (response.ok) {
         handleSuccess(message, "Login Successful");
